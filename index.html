@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tarea gato</title>
+</head>
+<body>
+<h1>Juego del gato</h1>
+<h2>Código Jugador vs. Computadora:</h2>
+<p>import java.util.Scanner;</p>
+<p>&nbsp;</p>
+<p>public class gatopc {</p>
+<p>&nbsp;</p>
+<p><span>&nbsp; &nbsp; </span>public static void main(String[] args) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>Scanner sc = new Scanner(System.in);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>String[][] gato;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>String opcion = "#";</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>int x = 3, y = 3, n = 0;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>gato = new String[3][3];</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>for (int i = 0; i &lt; 3; i++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for (int j = 0; j &lt; 3; j++) {
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.print(i);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.print(j);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>System.out.print("
+	");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>System.out.println(" ");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>for (int i = 0; i &lt; x; i++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for (int j = 0; j &lt; y; j++) {
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>gato[i][j] =
+	opcion;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>for (int i = 0; i &lt; 9; i++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if (i % 2 == 0) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>opcion = "X";</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>do {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("Jugador. Ingrese la posici&oacute;n que desee");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.print("Posici&oacute;n X: ");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>x =
+	sc.nextInt();</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.print("Posici&oacute;n Y: ");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>y =
+	sc.nextInt();</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if
+	(!"#".equals(gato[x][y])) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>System.out.println("Posici&oacute;n inv&aacute;lida");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>} while
+	(!"#".equals(gato[x][y]));</p>
+<p>&nbsp;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>gato[x][y] =
+	opcion;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for (int j = 0; j
+	&lt; 3; j++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for
+	(int k = 0; k &lt; 3; k++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>System.out.print(gato[j][k]);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>System.out.print(" ");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if (i % 2 == 1) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>opcion = "O";</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>do {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>x =
+	(int) (Math.random() * 3);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>y =
+	(int) (Math.random() * 3);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>} while
+	(!"#".equals(gato[x][y]));</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>gato[x][y] =
+	opcion;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("PC");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for (int j = 0; j
+	&lt; 3; j++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for
+	(int k = 0; k &lt; 3; k++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>System.out.print(gato[j][k]);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>System.out.print(" ");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for (int j = 0; j &lt; 2; j++) {
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if (j == 0) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>opcion = "X";</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if (j == 1) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>opcion = "O";</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if (((gato[0][0]
+	== opcion) &amp;&amp; (gato[0][1] == opcion) &amp;&amp; (gato[0][2] == opcion))</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>|| ((gato[1][0] == opcion) &amp;&amp; (gato[1][1] == opcion) &amp;&amp; (gato[1][2] == opcion))
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>|| ((gato[2][0] == opcion) &amp;&amp; (gato[2][1] == opcion) &amp;&amp; (gato[2][2] == opcion))
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>|| ((gato[0][0] == opcion) &amp;&amp; (gato[1][0] == opcion) &amp;&amp; (gato[2][0] == opcion))
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>|| ((gato[0][1] == opcion) &amp;&amp; (gato[1][1] == opcion) &amp;&amp; (gato[2][1] == opcion))
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>|| ((gato[0][2] == opcion) &amp;&amp; (gato[1][2] == opcion) &amp;&amp; (gato[2][2] == opcion))
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>|| ((gato[0][0] == opcion) &amp;&amp; (gato[1][1] == opcion) &amp;&amp; (gato[2][2] == opcion))
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>|| ((gato[0][2] == opcion) &amp;&amp; (gato[1][1] == opcion) &amp;&amp; (gato[2][0] == opcion))) {
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if
+	("X".equals(opcion)) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>System.out.println("Ganaste");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>n = 4;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if
+	("O".equals(opcion)) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>System.out.println("Perdiste");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>n = 4;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>break;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if (n == 4) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>break;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if (i == 8) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("Empate");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; </span>}</p>
+<p>}</p>
+<h2>Ejemplo:</h2>
+<img src="./imgs/gato01.png">
+<p>&nbsp;</p>
+<h2>Código 3 Jugadores:</h2>
+<p>import java.util.Scanner;</p>
+<p>&nbsp;</p>
+<p>public class gato3p {</p>
+<p>&nbsp;</p>
+<p><span>&nbsp; &nbsp; </span>public static void main(String[] args) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>Scanner sc = new Scanner(System.in);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>String[][] gato;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>String option = "#";</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>int x = 3, y = 3, n = 0, player = 0;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>gato = new String[3][3];</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>for (int i = 0; i &lt; 3; i++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for (int j = 0; j &lt; 3; j++) {
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.print(i);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.print(j);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>System.out.print("
+	");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>System.out.println(" ");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>for (int i = 0; i &lt; x; i++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for (int j = 0; j &lt; y; j++) {
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>gato[i][j] =
+	option;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>for (int i = 0; i &lt; 9; i++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>do {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>player = i % 3;
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>switch (player) {
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>case
+	0 -&gt; {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>option = "X";</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>n = 1;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>case
+	1 -&gt; {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>option = "O";</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>n = 2;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>case
+	2 -&gt; {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>option = "Y";</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		&nbsp; </span>n = 3;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("Jugador " + n + ". Ingrese la posici&oacute;n que desee");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.print("Posici&oacute;n X: ");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>x = sc.nextInt();
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.print("Posici&oacute;n Y: ");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>y = sc.nextInt();
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if
+	(!"#".equals(gato[x][y])) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("Posici&oacute;n inv&aacute;lida");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>} while
+	(!"#".equals(gato[x][y]));</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>gato[x][y] = option;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for (int j = 0; j &lt; 3; j++) {
+</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>for (int k = 0; k
+	&lt; 3; k++) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.print(gato[j][k]);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.print(" ");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if (((gato[0][0] == option)
+	&amp;&amp; (gato[0][1] == option) &amp;&amp; (gato[0][2] == option))</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>||
+	((gato[1][0] == option) &amp;&amp; (gato[1][1] == option) &amp;&amp; (gato[1][2] == option))</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>||
+	((gato[2][0] == option) &amp;&amp; (gato[2][1] == option) &amp;&amp; (gato[2][2] == option))</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>||
+	((gato[0][0] == option) &amp;&amp; (gato[1][0] == option) &amp;&amp; (gato[2][0] == option))</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>||
+	((gato[0][1] == option) &amp;&amp; (gato[1][1] == option) &amp;&amp; (gato[2][1] == option))</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>||
+	((gato[0][2] == option) &amp;&amp; (gato[1][2] == option) &amp;&amp; (gato[2][2] == option))</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>||
+	((gato[0][0] == option) &amp;&amp; (gato[1][1] == option) &amp;&amp; (gato[2][2] == option))</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>||
+	((gato[0][2] == option) &amp;&amp; (gato[1][1] == option) &amp;&amp; (gato[2][0] == option))) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("Gana Jugador " + n);</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>n = 4;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>break;</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>if (i == 8) {</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	</span>System.out.println("Empate");</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; &nbsp; &nbsp; </span>}</p>
+<p><span>&nbsp; &nbsp; </span>}</p>
+<p>}</p>
+<h2>Ejemplo:</h2>
+<img src="./imgs/gato02.png">
+<p>&nbsp;</p>
+</body>
+</html>
